@@ -9,7 +9,6 @@
  * Author: rasu & mattw
  *
  * Created on February 12, 2018, 12:14 PM
- * /
  */
 
 #ifndef PETDATABASESORTABLEBYWEIGHT_H

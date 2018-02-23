@@ -29,7 +29,7 @@ public:
         Query = 0;
     }
     PetDatabaseSearchableByWeight(PetDatabaseSortableByWeight *newWeightVec){
-        WeightVec = newWeightVec;
+        WeightVec = newWeightVec; //implement this operator
         Query = 0;
     }
     
