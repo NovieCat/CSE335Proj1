@@ -66,6 +66,20 @@ public:
         return Price;
     }
     
+    //setters
+    void SetName(string newName){
+        Name = newName;
+    }
+    void SetType(string newType){
+        Type = newType;
+    }
+    void SetWeight(unsigned int newWeight){
+        Weight = newWeight;
+    }
+    void SetPrice(double newPrice){
+        Price = newPrice;
+    }
+    
     //print
     virtual void print() const = 0;
 };

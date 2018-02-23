@@ -54,9 +54,27 @@ public:
     virtual ~Fish(){}
     
     //print
-    void print(){
-        printf("%-20s", "cat");
-        printf("meow");
+    virtual void print() const {
+        printf("%-7s" , "Name:");
+        printf("%-8s" , Name.c_str());
+        printf(" ");
+        printf("%-7s" , "Type:");
+        printf("%-10s" , Type.c_str());
+        printf("%-8s" , "Weight:");
+        printf("%-3i" , (int)Weight);
+        printf("%-6s", "Price: ");
+        printf("%-7F", Price);
+        printf("%-10s", "WaterType:");
+        printf("%-9s", WaterType);
+    }
+    
+    //get/set fluffy
+    string GetWaterType(){
+        return WaterType;
+    }
+    
+    void SetWaterType(bool newWaterType){
+        WaterType = newWaterType;
     }
 };
 
