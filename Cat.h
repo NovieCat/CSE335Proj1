@@ -19,23 +19,23 @@ public:
     Cat(){
         Name = "n/a";
         Type = "unknown";
-        Weight = 0;
         Price = 0;
+        Weight = 0;
         Fluffy = true;
     }
-    Cat(string newName, string newType, unsigned int newWeight, double newPrice, bool newFluffy){
+    Cat(string newName, string newType, double newPrice, unsigned int newWeight, bool newFluffy){
         Name = newName;
         Type = newType;
-        Weight = newWeight;
         Price = newPrice;
+        Weight = newWeight;
         Fluffy = newFluffy;
     }
     Cat(const Cat& baseCat){
         if (this != &baseCat){
             Name = baseCat.Name;
             Type = baseCat.Type;
-            Weight = baseCat.Weight;
             Price = baseCat.Price;
+            Weight = baseCat.Weight;
             Fluffy = baseCat.Fluffy;
         }
     }
@@ -43,8 +43,8 @@ public:
         if (this != &baseCat){
             Name = baseCat.Name;
             Type = baseCat.Type;
-            Weight = baseCat.Weight;
             Price = baseCat.Price;
+            Weight = baseCat.Weight;
             Fluffy = baseCat.Fluffy;
         }
         return *this;
@@ -55,10 +55,10 @@ public:
     //print
     virtual void print() const {
         printf("%-7s" , "Name:");
-        printf("%-8s" , Name);
+        printf("%-8s" , Name.c_str());
         printf(" ");
         printf("%-7s" , "Type:");
-        printf("%-10s" , Type);
+        printf("%-10s" , Type.c_str());
         printf("%-8s" , "Weight:");
         printf("%-3i" , (int)Weight);
         printf("%-6s", "Price: ");

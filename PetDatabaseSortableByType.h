@@ -52,7 +52,7 @@ public:
     }
     
     virtual void swap(int i, int j){
-        int temp = pet_vec[i];
+        Pet *temp = pet_vec[i];
         pet_vec[i]=pet_vec[j];
         pet_vec[j]=temp;
     }

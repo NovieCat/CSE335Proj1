@@ -20,15 +20,15 @@ using namespace std;
 class PetDatabaseSearchableByType:  public SearchableVector{
 protected: 
     PetDatabaseSortableByType *TypeVec;
-    double Query;
+    string Query;
 public:
     //constructors
     PetDatabaseSearchableByType(){
-        Query = 0;
+        Query = "";
     }
     PetDatabaseSearchableByType(PetDatabaseSortableByType *newTypeVec){
         TypeVec = newTypeVec; //implement this operator
-        Query = 0;
+        Query = "";
     }
     
     //destructor
@@ -42,21 +42,21 @@ public:
     }
     
     virtual int compareAt(int i)const{
-        if (i > Query)
+        if (TypeVec->getPet(i)->GetType() > Query)
             return 1;
-        else if (i == Query)
+        else if (TypeVec->getPet(i)->GetType() == Query)
             return 0;
         else
             return -1;
     }
     
     //other functions
-    void setQuery(double newQuery){
+    void setQuery(string newQuery){
         Query = newQuery;
     }
     
     Pet getPet(int i){
-        return TypeVec->getPet(i);
+        //return TypeVec->getPet(i);
     }
 };
 

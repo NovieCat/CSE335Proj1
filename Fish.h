@@ -20,23 +20,23 @@ public:
     Fish(){
         Name = "n/a";
         Type = "unknown";
-        Weight = 0;
         Price = 0;
+        Weight = 0;
         WaterType = true;
     }
-    Fish(string newName, string newType, unsigned int newWeight, double newPrice, string newWaterType){
+    Fish(string newName, string newType, double newPrice, unsigned int newWeight, string newWaterType){
         Name = newName;
         Type = newType;
-        Weight = newWeight;
         Price = newPrice;
+        Weight = newWeight;
         WaterType = newWaterType;
     }
     Fish(const Fish& baseFish){
         if (this != &baseFish){
             Name = baseFish.Name;
             Type = baseFish.Type;
-            Weight = baseFish.Weight;
             Price = baseFish.Price;
+            Weight = baseFish.Weight;
             WaterType = baseFish.WaterType;
         }
     }
@@ -44,8 +44,8 @@ public:
         if (this != &baseFish){
             Name = baseFish.Name;
             Type = baseFish.Type;
-            Weight = baseFish.Weight;
             Price = baseFish.Price;
+            Weight = baseFish.Weight;
             WaterType = baseFish.WaterType;
         }
         return *this;
@@ -56,16 +56,16 @@ public:
     //print
     virtual void print() const {
         printf("%-7s" , "Name:");
-        printf("%-8s" , Name);
+        printf("%-8s" , Name.c_str());
         printf(" ");
         printf("%-7s" , "Type:");
-        printf("%-10s" , Type);
+        printf("%-10s" , Type.c_str());
         printf("%-8s" , "Weight:");
         printf("%-3i" , (int)Weight);
         printf("%-6s", "Price: ");
         printf("%-7F", Price);
         printf("%-10s", "WaterType:");
-        printf("%-9s", WaterType);
+        printf("%-9s", WaterType.c_str());
     }
     
     //get/set fluffy

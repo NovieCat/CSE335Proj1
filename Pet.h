@@ -15,37 +15,37 @@ class Pet{
 protected:
     string Name;
     string Type;
-    unsigned int Weight;
     double Price;
+    unsigned int Weight;
     
 public:
     //constructors
     Pet(){
         Name = "n/a";
         Type = "unknown";
-        Weight = 0;
         Price = 0;
+        Weight = 0;
     }
-    Pet(string newName, string newType, unsigned int newWeight, double newPrice){
+    Pet(string newName, string newType, double newPrice, unsigned int newWeight){
         Name = newName;
         Type = newType;
-        Weight = newWeight;
         Price = newPrice;
+        Weight = newWeight;
     }
     Pet(const Pet& basePet){
         if (this != &basePet){
             Name = basePet.Name;
             Type = basePet.Type;
-            Weight = basePet.Weight;
             Price = basePet.Price;
+            Weight = basePet.Weight;
         }
     }
     Pet& operator=(const Pet& basePet){
         if (this != &basePet){
             Name = basePet.Name;
             Type = basePet.Type;
-            Weight = basePet.Weight;
             Price = basePet.Price;
+            Weight = basePet.Weight;
         }
         return *this;
     }
@@ -59,11 +59,11 @@ public:
     string GetType(){
         return Type;
     }
-    unsigned int GetWeight(){
-        return Weight;
-    }
     double GetPrice(){
         return Price;
+    }
+    unsigned int GetWeight(){
+        return Weight;
     }
     
     //setters
@@ -73,11 +73,11 @@ public:
     void SetType(string newType){
         Type = newType;
     }
-    void SetWeight(unsigned int newWeight){
-        Weight = newWeight;
-    }
     void SetPrice(double newPrice){
         Price = newPrice;
+    }
+    void SetWeight(unsigned int newWeight){
+        Weight = newWeight;
     }
     
     //print

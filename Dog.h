@@ -20,23 +20,23 @@ public:
     Dog(){
         Name = "n/a";
         Type = "unknown";
-        Weight = 0;
         Price = 0;
+        Weight = 0;
         Category = "none";
     }
-    Dog(string newName, string newType, unsigned int newWeight, double newPrice, string newCategory){
+    Dog(string newName, string newType, double newPrice, unsigned int newWeight, string newCategory){
         Name = newName;
         Type = newType;
-        Weight = newWeight;
         Price = newPrice;
+        Weight = newWeight;
         Category = newCategory;
     }
     Dog(const Dog& baseDog){
         if (this != &baseDog){
             Name = baseDog.Name;
             Type = baseDog.Type;
-            Weight = baseDog.Weight;
             Price = baseDog.Price;
+            Weight = baseDog.Weight;
             Category = baseDog.Category;
         }
     }
@@ -44,8 +44,8 @@ public:
         if (this != &baseDog){
             Name = baseDog.Name;
             Type = baseDog.Type;
-            Weight = baseDog.Weight;
             Price = baseDog.Price;
+            Weight = baseDog.Weight;
             Category = baseDog.Category;
         }
         return *this;
@@ -56,16 +56,16 @@ public:
     //print
     virtual void print() const {
         printf("%-7s" , "Name:");
-        printf("%-8s" , Name);
+        printf("%-8s" , Name.c_str());
         printf(" ");
         printf("%-7s" , "Type:");
-        printf("%-10s" , Type);
+        printf("%-10s" , Type.c_str());
         printf("%-8s" , "Weight:");
         printf("%-3i" , (int)Weight);
         printf("%-6s", "Price: ");
         printf("%-7F", Price);
         printf("%-10s", "Category:");
-        printf("%-9s", Category);
+        printf("%-9s", Category.c_str());
     }
     
     //get/set Category

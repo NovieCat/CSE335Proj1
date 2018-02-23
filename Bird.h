@@ -17,23 +17,23 @@ public:
     Bird(){
         Name = "n/a";
         Type = "unknown";
-        Weight = 0;
         Price = 0;
+        Weight = 0;
         Nocturnal = true;
     }
-    Bird(string newName, string newType, unsigned int newWeight, double newPrice, bool newNocturnal){
+    Bird(string newName, string newType, double newPrice, unsigned int newWeight, bool newNocturnal){
         Name = newName;
         Type = newType;
-        Weight = newWeight;
         Price = newPrice;
+        Weight = newWeight;
         Nocturnal = newNocturnal;
     }
     Bird(const Bird& baseBird){
         if (this != &baseBird){
             Name = baseBird.Name;
             Type = baseBird.Type;
-            Weight = baseBird.Weight;
             Price = baseBird.Price;
+            Weight = baseBird.Weight;
             Nocturnal = baseBird.Nocturnal;
         }
     }
@@ -41,8 +41,8 @@ public:
         if (this != &baseBird){
             Name = baseBird.Name;
             Type = baseBird.Type;
-            Weight = baseBird.Weight;
             Price = baseBird.Price;
+            Weight = baseBird.Weight;
             Nocturnal = baseBird.Nocturnal;
         }
         return *this;
@@ -53,10 +53,10 @@ public:
     //print
     virtual void print() const {
         printf("%-7s" , "Name:");
-        printf("%-8s" , Name);
+        printf("%-8s" , Name.c_str());
         printf(" ");
         printf("%-7s" , "Type:");
-        printf("%-10s" , Type);
+        printf("%-10s" , Type.c_str());
         printf("%-8s" , "Weight:");
         printf("%-3i" , (int)Weight);
         printf("%-6s", "Price: ");

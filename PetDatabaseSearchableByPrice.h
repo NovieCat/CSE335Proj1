@@ -42,9 +42,9 @@ public:
     }
     
     virtual int compareAt(int i)const{
-        if (i > Query)
+        if (PriceVec->getPet(i)->GetPrice() > Query)
             return 1;
-        else if (i == Query)
+        else if (PriceVec->getPet(i)->GetPrice() == Query)
             return 0;
         else
             return -1;
@@ -56,7 +56,7 @@ public:
     }
     
     Pet getPet(int i){
-        return PriceVec->getPet(i);
+        //return PriceVec->getPet(i);
     }
 };
 

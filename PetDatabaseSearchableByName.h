@@ -16,19 +16,20 @@
 #include <vector>
 #include "Pet.h"
 #include "SearchableVector.h"
+#include "PetDatabaseSortableByName.h"
 using namespace std;
 class PetDatabaseSearchableByName:  public SearchableVector{
 protected: 
     PetDatabaseSortableByName *NameVec;
-    double Query;
+    string Query;
 public:
     //constructors
     PetDatabaseSearchableByName(){
-        Query = 0;
+        Query = "";
     }
     PetDatabaseSearchableByName(PetDatabaseSortableByName *newNameVec){
         NameVec = newNameVec; //implement this operator
-        Query = 0;
+        Query = "";
     }
     
     //destructor
@@ -42,21 +43,21 @@ public:
     }
     
     virtual int compareAt(int i)const{
-        if (i > Query)
+        if (NameVec->getPet(i)->GetName() > Query)
             return 1;
-        else if (i == Query)
+        else if (NameVec->getPet(i)->GetName() == Query)
             return 0;
         else
             return -1;
     }
     
     //other functions
-    void setQuery(double newQuery){
+    void setQuery(string newQuery){
         Query = newQuery;
     }
     
     Pet getPet(int i){
-        return NameVec->getPet(i);
+        //return NameVec->getPet(i);
     }
 };
 

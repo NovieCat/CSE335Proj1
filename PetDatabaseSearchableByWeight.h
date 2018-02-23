@@ -22,7 +22,7 @@ using namespace std;
 class PetDatabaseSearchableByWeight:  public SearchableVector{
 protected: 
     PetDatabaseSortableByWeight *WeightVec;
-    double Query;
+    int Query;
 public:
     //constructors
     PetDatabaseSearchableByWeight(){
@@ -44,9 +44,9 @@ public:
     }
     
     virtual int compareAt(int i)const{
-        if (i > Query)
+        if (WeightVec->getPet(i)->GetWeight() > Query)
             return 1;
-        else if (i == Query)
+        else if (WeightVec->getPet(i)->GetWeight() == Query)
             return 0;
         else
             return -1;
@@ -58,7 +58,7 @@ public:
     }
     
     Pet getPet(int i){
-        return WeightVec->getPet(i);
+        //return WeightVec->getPet(i);
     }
 };
 
