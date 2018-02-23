@@ -26,7 +26,19 @@ protected:
 public:
     PetDatabaseSortableByPrice(vector<Pet*>&){}
     Pet* getPet(int i){}
+    PetDatabaseSortableByPrice(const PetDatabaseSortableByPrice& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+    }
+    PetDatabaseSortableByPrice& operator=(const PetDatabaseSortableByPrice& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+        return *this;
+    }
 };
+
 
 
 #endif /* PETDATABASESORTABLEBYPRICE_H */

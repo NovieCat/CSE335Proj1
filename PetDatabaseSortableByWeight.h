@@ -23,7 +23,17 @@ protected:
 public:
     PetDatabaseSortableByWeight(vector<Pet*>&){}
     Pet* getPet(int i){}
-    
+    PetDatabaseSortableByWeight(const PetDatabaseSortableByWeight& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+    }
+    PetDatabaseSortableByWeight& operator=(const PetDatabaseSortableByWeight& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+        return *this;
+    }    
 };
 #endif /* PETDATABASESORTABLEBYWEIGHT_H */
 
