@@ -13,17 +13,16 @@
 
 #ifndef PETDATABASESORTABLEBYNAME_H
 #define PETDATABASESORTABLEBYNAME_H
-#include "SortableVector.h"
 #include <vector>
+#include "SortableVector.h"
 #include "Pet.h"
 using namespace std;
 class PetDatabaseSortableByName:  public SortableVector{
 protected: 
     vector<Pet*> pet_vec;
 public:
+    //constructors
     PetDatabaseSortableByName(vector<Pet*>&){}
-    Pet* getPet(int i){}
-    
     
     PetDatabaseSortableByName(const PetDatabaseSortableByName& vec1){
         if (this != &vec1){
@@ -36,13 +35,39 @@ public:
         }
         return *this;
     }
-    /*
+    
+    //destructor
+    virtual ~PetDatabaseSortableByName(){}
+    
+    //virtual function implementation
+    virtual unsigned int getSize() const {
+        return pet_vec.size();
+    }
+    
+    virtual bool smaller(int i, int j) const{
+        if(pet_vec[i] < pet_vec[j])
+            return true;
+        else
+            return false;
+    }
+    
     virtual void swap(int i, int j){
-        Pet temp = pet_vec[i];
+        int temp = pet_vec[i];
         pet_vec[i]=pet_vec[j];
-        pet_vec[j]=Pet;
-    }//
-    */
+        pet_vec[j]=temp;
+    }
+    
+    virtual void DisplayRecords() {
+        //call print of pet
+    }
+    
+    Pet* getPet(int i){
+        if (i >= pet_vec.size()){
+            cout << "Index exceeds size of vector; returning 0" << endl;
+            return 0;
+        }
+        return pet_vec[i];
+    }
 };
  
 

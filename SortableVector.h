@@ -21,7 +21,6 @@ public:
     virtual bool smaller(int i, int j) const = 0;
     virtual void swap(int i, int j) = 0;
     virtual void DisplayRecords() =0;
-    //virtual Pet getPet(int i) =0;
 };
 
 #endif /* SORTABLEVECTOR_H */
