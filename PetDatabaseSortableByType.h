@@ -22,7 +22,7 @@ protected:
     vector<Pet*> pet_vec;
 public:
     PetDatabaseSortableByType(vector<Pet*>&){}
-    Pet getPet(int i){}
+    Pet* getPet(int i){}
 };
 
 
