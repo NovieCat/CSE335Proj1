@@ -59,6 +59,12 @@ public:
     
     virtual void DisplayRecords() {
         //call print of pet
+        int i =0;
+        while(i< pet_vec.size()){
+            getPet(i)->print();           
+            i++;
+        }
+    
     }
     
     Pet* getPet(int i){
