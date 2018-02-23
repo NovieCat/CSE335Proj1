@@ -55,10 +55,10 @@ public:
     //print
     virtual void print() const {
         printf("%-7s" , "Name:");
-        printf("%-8s" , Name.c_str());
+        printf("%-8s" , Name);
         printf(" ");
         printf("%-7s" , "Type:");
-        printf("%-10s" , Type.c_str());
+        printf("%-10s" , Type);
         printf("%-8s" , "Weight:");
         printf("%-3i" , (int)Weight);
         printf("%-6s", "Price: ");
