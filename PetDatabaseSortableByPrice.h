@@ -25,7 +25,7 @@ protected:
     vector<Pet*> pet_vec;
 public:
     PetDatabaseSortableByPrice(vector<Pet*>&){}
-    Dog getPet(int i){}
+    Pet* getPet(int i){}
 };
 
 

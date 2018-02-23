@@ -22,13 +22,13 @@ protected:
     vector<Pet*> pet_vec;
 public:
     PetDatabaseSortableByName(vector<Pet*>&){}
-    virtual Pet getPet(int i){}
+    Pet* getPet(int i){}
     /*
     virtual void swap(int i, int j){
         Pet temp = pet_vec[i];
         pet_vec[i]=pet_vec[j];
         pet_vec[j]=Pet;
-    }
+    }/
     */
 };
  
