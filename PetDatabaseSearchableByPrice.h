@@ -26,6 +26,8 @@ public:
     PetDatabaseSearchableByPrice(PetDatabaseSearchableByPrice*){}
     PetDatabaseSearchableByPrice(vector<Pet*>&){}
     void setQuery(double i){}
+    
+    Pet getPet(int i){}
 };
 
 

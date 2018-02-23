@@ -14,20 +14,52 @@
 #ifndef PETDATABASESEARCHABLEBYWEIGHT_H
 #define PETDATABASESEARCHABLEBYWEIGHT_H
 
-#include "SearchableVector.h"
 #include <vector>
 #include "Pet.h"
+#include "SearchableVector.h"
+#include "PetDatabaseSortableByWeight.h"
 using namespace std;
 class PetDatabaseSearchableByWeight:  public SearchableVector{
 protected: 
-    vector<Pet*> pet_vec;
-    unsigned int size;
+    PetDatabaseSortableByWeight *WeightVec;
     double Query;
 public:
-    PetDatabaseSearchableByWeight(vector<Pet*>&){}
-    void setQuery(double i){}
+    //constructors
+    PetDatabaseSearchableByWeight(){
+        Query = 0;
+    }
+    PetDatabaseSearchableByWeight(PetDatabaseSortableByWeight *newWeightVec){
+        WeightVec = newWeightVec;
+        Query = 0;
+    }
     
+    //destructor
+    virtual ~PetDatabaseSearchableByWeight(){
+        delete WeightVec;
+    }
     
+    //virtual implementation
+    virtual int getSize()const{
+        return WeightVec->getSize();
+    }
+    
+    virtual int compareAt(int i)const{
+        if (i > Query)
+            return 1;
+        else if (i == Query)
+            return 0;
+        else
+            return -1;
+    }
+    
+    //other functions
+    void setQuery(double newQuery){
+        Query = newQuery;
+    }
+    
+    Pet getPet(int i){
+        return WeightVec->getPet(i);
+    }
 };
 
 #endif /* PETDATABASESEARCHABLEBYWEIGHT_H */

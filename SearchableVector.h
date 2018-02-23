@@ -20,7 +20,6 @@ public:
     //the virtual functions for searchable vectors
     virtual int getSize()const =0;
     virtual int compareAt(int i)const = 0;
-    //virtual Pet getPet(int i) =0;
 };
 
 

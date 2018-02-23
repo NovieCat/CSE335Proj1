@@ -25,6 +25,8 @@ protected:
 public:
     PetDatabaseSearchableByType(vector<Pet*>&){}
     void setQuery(string i){}
+    
+    Pet getPet(int i){}
 };
 
 
