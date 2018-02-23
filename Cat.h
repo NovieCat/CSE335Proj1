@@ -64,7 +64,7 @@ public:
         printf("%-6s", "Price: ");
         printf("%-7F", Price);
         printf("%-10s", "Fluffy:");
-        printf("%-9s", Fluffy);
+        printf("%-9s", Fluffy ? "true" : "false");
     }
     
     //get/set fluffy

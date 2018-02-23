@@ -62,7 +62,7 @@ public:
         printf("%-6s", "Price: ");
         printf("%-7F", Price);
         printf("%-10s", "Nocturnal:");
-        printf("%-9s", Nocturnal);
+        printf("%-9s", Nocturnal ? "true" : "false");
     }
     
     //get/set fluffy

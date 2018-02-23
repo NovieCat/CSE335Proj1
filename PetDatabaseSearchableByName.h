@@ -56,8 +56,8 @@ public:
         Query = newQuery;
     }
     
-    Pet getPet(int i){
-        //return NameVec->getPet(i);
+    Pet* getPet(int i){
+        return NameVec->getPet(i);
     }
 };
 
