@@ -19,15 +19,45 @@
 using namespace std;
 class PetDatabaseSearchableByName:  public SearchableVector{
 protected: 
-    vector<Pet*> pet_vec;
-    unsigned int size;
-    string Query;
+    PetDatabaseSortableByName *NameVec;
+    double Query;
 public:
-    PetDatabaseSearchableByName(PetDatabaseSearchableByName* i){}
-    PetDatabaseSearchableByName(vector<Pet*>&){}
-    void setQuery(string i){}
+    //constructors
+    PetDatabaseSearchableByName(){
+        Query = 0;
+    }
+    PetDatabaseSearchableByName(PetDatabaseSortableByName *newNameVec){
+        NameVec = newNameVec; //implement this operator
+        Query = 0;
+    }
     
-    Pet getPet(int i){}
+    //destructor
+    virtual ~PetDatabaseSearchableByName(){
+        delete NameVec;
+    }
+    
+    //virtual implementation
+    virtual int getSize()const{
+        return NameVec->getSize();
+    }
+    
+    virtual int compareAt(int i)const{
+        if (i > Query)
+            return 1;
+        else if (i == Query)
+            return 0;
+        else
+            return -1;
+    }
+    
+    //other functions
+    void setQuery(double newQuery){
+        Query = newQuery;
+    }
+    
+    Pet getPet(int i){
+        return NameVec->getPet(i);
+    }
 };
 
 
