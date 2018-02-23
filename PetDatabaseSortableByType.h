@@ -20,9 +20,21 @@ using namespace std;
 class PetDatabaseSortableByType:  public SortableVector{
 protected: 
     vector<Pet*> pet_vec;
+    
 public:
     PetDatabaseSortableByType(vector<Pet*>&){}
     Pet* getPet(int i){}
+    PetDatabaseSortableByType(const PetDatabaseSortableByType& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+    }
+    PetDatabaseSortableByType& operator=(const PetDatabaseSortableByType& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+        return *this;
+    }
 };
 
 

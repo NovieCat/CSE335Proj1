@@ -23,12 +23,25 @@ protected:
 public:
     PetDatabaseSortableByName(vector<Pet*>&){}
     Pet* getPet(int i){}
+    
+    
+    PetDatabaseSortableByName(const PetDatabaseSortableByName& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+    }
+    PetDatabaseSortableByName& operator=(const PetDatabaseSortableByName& vec1){
+        if (this != &vec1){
+            pet_vec = vec1.pet_vec;
+        }
+        return *this;
+    }
     /*
     virtual void swap(int i, int j){
         Pet temp = pet_vec[i];
         pet_vec[i]=pet_vec[j];
         pet_vec[j]=Pet;
-    }/
+    }//
     */
 };
  
