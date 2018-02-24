@@ -38,7 +38,7 @@ public:
     }
     
     //virtual implementation
-    virtual int getSize()const{
+    virtual unsigned int getSize()const{
         return NameVec->getSize();
     }
     
@@ -57,7 +57,6 @@ public:
     }
     
     Pet* getPet(int i){
-        //cout<< "here"<< endl;
         return NameVec->getPet(i);
     }
 };

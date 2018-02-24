@@ -18,7 +18,7 @@ using namespace std;
 class SearchableVector{
 public:
     //the virtual functions for searchable vectors
-    virtual int getSize()const =0;
+    virtual unsigned int getSize()const =0;
     virtual int compareAt(int i)const = 0;
 };
 

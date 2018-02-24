@@ -39,7 +39,7 @@ public:
     }
     
     //virtual implementation
-    virtual int getSize()const{
+    virtual unsigned int getSize()const{
         return WeightVec->getSize();
     }
     
