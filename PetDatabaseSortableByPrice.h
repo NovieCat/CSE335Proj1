@@ -71,6 +71,7 @@ public:
     
     Pet* getPet(int i){
         if (i >= pet_vec.size()){
+            
             cout << "Index exceeds size of vector; returning 0" << endl;
             return 0;
         }

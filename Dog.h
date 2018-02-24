@@ -66,6 +66,7 @@ public:
         printf("%-7F", Price);
         printf("%-10s", "Category:");
         printf("%-9s", Category.c_str());
+        printf("\n");
     }
     
     //get/set Category

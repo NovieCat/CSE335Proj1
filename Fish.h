@@ -66,6 +66,7 @@ public:
         printf("%-7F", Price);
         printf("%-10s", "WaterType:");
         printf("%-9s", WaterType.c_str());
+        printf("\n");
     }
     
     //get/set fluffy

@@ -22,7 +22,9 @@ protected:
     vector<Pet*> pet_vec;
 public:
     //constructors
-    PetDatabaseSortableByName(vector<Pet*>&){}
+    PetDatabaseSortableByName(vector<Pet*>& in_vec){
+        pet_vec = in_vec;
+    }
     
     PetDatabaseSortableByName(const PetDatabaseSortableByName& vec1){
         if (this != &vec1){
@@ -67,9 +69,13 @@ public:
     }
     
     Pet* getPet(int i){
+        
         if (i >= pet_vec.size()){
+            
             cout << "Index exceeds size of vector; returning 0" << endl;
-            return 0;
+            cout<< pet_vec.size()<< endl;
+            //cout<< pet_vec[0];
+            return NULL;
         }
         return pet_vec[i];
     }
