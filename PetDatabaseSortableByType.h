@@ -22,6 +22,8 @@ protected:
     vector<Pet*> pet_vec;
 public:
     //constructors
+    PetDatabaseSortableByType(){}
+    
     PetDatabaseSortableByType(vector<Pet*>& in_vec){
         pet_vec = in_vec;
     }
@@ -39,7 +41,12 @@ public:
     }
     
     //destructor
-    virtual ~PetDatabaseSortableByType(){}
+    virtual ~PetDatabaseSortableByType(){
+        for (int i = 0; i < pet_vec.size(); i++){
+            delete pet_vec[i];
+        }
+        pet_vec.clear();
+    }
     
     //virtual function implementation
     virtual unsigned int getSize() const {
@@ -69,7 +76,7 @@ public:
     
     }
     
-    Pet* getPet(int i){
+    Pet* getPet(int i) const{
         if (i >= pet_vec.size()){
             cout << "Index exceeds size of vector; returning 0" << endl;
             return 0;

@@ -22,6 +22,8 @@ protected:
     vector<Pet*> pet_vec;
 public:
     //constructors
+    PetDatabaseSortableByName(){}
+    
     PetDatabaseSortableByName(vector<Pet*>& in_vec){
         pet_vec = in_vec;
     }
@@ -39,7 +41,12 @@ public:
     }
     
     //destructor
-    virtual ~PetDatabaseSortableByName(){}
+    virtual ~PetDatabaseSortableByName(){
+        for (int i = 0; i < pet_vec.size(); i++){
+            delete pet_vec[i];
+        }
+        pet_vec.clear();
+    }
     
     //virtual function implementation
     virtual unsigned int getSize() const {
