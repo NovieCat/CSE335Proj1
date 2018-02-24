@@ -22,7 +22,9 @@ protected:
     vector<Pet*> pet_vec;
 public:
     //constructors
-    PetDatabaseSortableByWeight(vector<Pet*>&){}
+    PetDatabaseSortableByWeight(vector<Pet*>& in_vec){
+        pet_vec = in_vec;
+    }
     
     PetDatabaseSortableByWeight(const PetDatabaseSortableByWeight& vec1){
         if (this != &vec1){

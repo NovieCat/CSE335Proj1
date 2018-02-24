@@ -25,7 +25,9 @@ protected:
     vector<Pet*> pet_vec;
 public:
     //constructors
-    PetDatabaseSortableByPrice(vector<Pet*>&){}
+    PetDatabaseSortableByPrice(vector<Pet*>& in_vec){
+        pet_vec = in_vec;
+    }
     
     PetDatabaseSortableByPrice(const PetDatabaseSortableByPrice& vec1){
         if (this != &vec1){
