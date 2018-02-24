@@ -60,11 +60,11 @@ public:
         printf(" ");
         printf("%-7s" , "Type:");
         printf("%-10s" , Type.c_str());
-        printf("%-8s" , "Weight:");
+        printf("%-9s" , "Weight:");
         printf("%-3i" , (int)Weight);
-        printf("%-6s", "Price: ");
+        printf("%-8s", "Price: ");
         printf("%-8.2F", Price);
-        printf("%-10s", "Category:");
+        printf("%-11s", "Category:");
         printf("%-9s", Category.c_str());
         printf("\n");
     }

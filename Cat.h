@@ -59,11 +59,11 @@ public:
         printf(" ");
         printf("%-7s" , "Type:");
         printf("%-10s" , Type.c_str());
-        printf("%-8s" , "Weight:");
+        printf("%-9s" , "Weight:");
         printf("%-3i" , (int)Weight);
-        printf("%-6s", "Price: ");
+        printf("%-8s", "Price: ");
         printf("%-8.2F", Price);
-        printf("%-10s", "Fluffy:");
+        printf("%-11s", "Fluffy:");
         printf("%-9s", Fluffy ? "true" : "false");
         printf("\n");
     }
