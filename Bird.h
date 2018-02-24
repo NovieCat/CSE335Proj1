@@ -60,7 +60,7 @@ public:
         printf("%-8s" , "Weight:");
         printf("%-3i" , (int)Weight);
         printf("%-6s", "Price: ");
-        printf("%-7F", Price);
+        printf("%-8.2F", Price);
         printf("%-10s", "Nocturnal:");
         printf("%-9s", Nocturnal ? "true" : "false");
         printf("\n");

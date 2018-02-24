@@ -62,7 +62,7 @@ public:
         printf("%-8s" , "Weight:");
         printf("%-3i" , (int)Weight);
         printf("%-6s", "Price: ");
-        printf("%-7F", Price);
+        printf("%-8.2F", Price);
         printf("%-10s", "Fluffy:");
         printf("%-9s", Fluffy ? "true" : "false");
         printf("\n");
