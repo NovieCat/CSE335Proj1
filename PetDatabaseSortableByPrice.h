@@ -50,7 +50,7 @@ public:
     }
     
     virtual bool smaller(int i, int j) const{
-        if(pet_vec[i] < pet_vec[j])
+        if(pet_vec[i]->GetPrice() < pet_vec[j]->GetPrice())
             return true;
         else
             return false;

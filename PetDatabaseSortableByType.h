@@ -47,7 +47,7 @@ public:
     }
     
     virtual bool smaller(int i, int j) const{
-        if(pet_vec[i] < pet_vec[j])
+        if(pet_vec[i]->GetType() < pet_vec[j]->GetType())
             return true;
         else
             return false;
