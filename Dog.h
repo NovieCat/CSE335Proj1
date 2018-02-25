@@ -1,6 +1,6 @@
 /* 
  * File:   Dog.h
- * Author: rasu
+ * Author: rasu & mattw
  *
  * Created on February 12, 2018, 12:14 PM
  */

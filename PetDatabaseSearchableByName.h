@@ -6,7 +6,7 @@
 
 /* 
  * File:   PetDatabaseSearchableByName.h
- * Author: rasu and mattw
+ * Author: rasu & mattw
  *
  * Created on February 12, 2018, 12:16 PM
  */

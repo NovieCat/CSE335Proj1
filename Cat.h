@@ -1,6 +1,6 @@
 /* 
- * File:   Cat.h
- * Author: rasu
+ * File:   Cat.h 
+ * Author: rasu & mattw
  *
  * Created on February 12, 2018, 12:13 PM
  */

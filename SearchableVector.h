@@ -6,7 +6,7 @@
 
 /* 
  * File:   SearchableVector.h
- * Author: mattw
+ * Author: mattw & rasu
  *
  * Created on February 8, 2018, 10:04 AM
  */

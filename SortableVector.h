@@ -6,7 +6,7 @@
 
 /* 
  * File:   Sortable Vector.h
- * Author: mattw
+ * Author: mattw & rasu
  *
  * Created on February 12, 2018, 5:00 PM
  */
