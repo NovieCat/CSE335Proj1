@@ -27,7 +27,7 @@ public:
     //constructors
     PetDatabaseSortableByPrice(){}
     
-    PetDatabaseSortableByPrice(vector<Pet*>& in_vec){
+    PetDatabaseSortableByPrice(vector<Pet*> in_vec){
         pet_vec = in_vec;
     }
     
@@ -36,6 +36,7 @@ public:
             pet_vec = vec1.pet_vec;
         }
     }
+    
     PetDatabaseSortableByPrice& operator=(const PetDatabaseSortableByPrice& vec1){
         if (this != &vec1){
             pet_vec = vec1.pet_vec;
@@ -44,12 +45,12 @@ public:
     }
     
     //destructor
-    virtual ~PetDatabaseSortableByPrice(){
+    /*virtual ~PetDatabaseSortableByPrice(){
         for (int i = 0; i < pet_vec.size(); i++){
             delete pet_vec[i];
         }
         pet_vec.clear();
-    }
+    }*/
     
     //virtual function implementation
     virtual unsigned int getSize() const {

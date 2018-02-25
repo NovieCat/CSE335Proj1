@@ -34,7 +34,7 @@ public:
     
     //destructor
     virtual ~PetDatabaseSearchableByPrice(){
-        delete PriceVec;
+        //delete PriceVec;
     }
     
     //virtual implementation

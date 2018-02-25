@@ -24,7 +24,7 @@ public:
     //constructors
     PetDatabaseSortableByType(){}
     
-    PetDatabaseSortableByType(vector<Pet*>& in_vec){
+    PetDatabaseSortableByType(vector<Pet*> in_vec){
         pet_vec = in_vec;
     }
     
@@ -33,6 +33,7 @@ public:
             pet_vec = vec1.pet_vec;
         }
     }
+    
     PetDatabaseSortableByType& operator=(const PetDatabaseSortableByType& vec1){
         if (this != &vec1){
             pet_vec = vec1.pet_vec;
@@ -41,12 +42,12 @@ public:
     }
     
     //destructor
-    virtual ~PetDatabaseSortableByType(){
+    /*virtual ~PetDatabaseSortableByType(){
         for (int i = 0; i < pet_vec.size(); i++){
             delete pet_vec[i];
         }
         pet_vec.clear();
-    }
+    }*/
     
     //virtual function implementation
     virtual unsigned int getSize() const {

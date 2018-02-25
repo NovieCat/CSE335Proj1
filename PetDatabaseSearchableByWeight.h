@@ -36,7 +36,7 @@ public:
     
     //destructor
     virtual ~PetDatabaseSearchableByWeight(){
-        delete WeightVec;
+        //delete WeightVec;
     }
     
     //virtual implementation
