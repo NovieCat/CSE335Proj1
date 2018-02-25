@@ -27,6 +27,7 @@ public:
     PetDatabaseSearchableByName(){
         Query = "";
     }
+    
     PetDatabaseSearchableByName(PetDatabaseSortableByName *newNameVec){
         NameVec = newNameVec; //implement this operator
         Query = "";

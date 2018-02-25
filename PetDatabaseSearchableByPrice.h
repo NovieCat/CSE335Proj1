@@ -26,6 +26,7 @@ public:
     PetDatabaseSearchableByPrice(){
         Query = 0;
     }
+    
     PetDatabaseSearchableByPrice(PetDatabaseSortableByPrice *newPriceVec){
         PriceVec = newPriceVec; //implement this operator
         Query = 0;
