@@ -45,12 +45,14 @@ public:
     }
     
     //destructor
-    /*virtual ~PetDatabaseSortableByPrice(){
+    virtual ~PetDatabaseSortableByPrice(){
+        /*
         for (int i = 0; i < pet_vec.size(); i++){
             delete pet_vec[i];
         }
         pet_vec.clear();
-    }*/
+        */
+    }
     
     //virtual function implementation
     virtual unsigned int getSize() const {
